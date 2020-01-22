@@ -403,78 +403,166 @@ maxwell_falls= Trail.create(
 
 
     royal_arch= Trail.create(
-        name: "", 
-        miles: , 
-        difficulty: "", 
-        type: "", 
-        link: "", 
-        keywords: "", 
-        text: "",
+        name: "Royal Arch", 
+        miles: 4, 
+        difficulty: "Hard", 
+        type: "Out and Back", 
+        link: "https://www.alltrails.com/trail/us/colorado/royal-arch-trail", 
+        keywords: "dog friendly, hiking, running, scramble", 
+        text: "Royal Arch Trail is a 4 mile heavily trafficked out and back trail located near Boulder, Colorado that features beautiful wild flowers and is rated as difficult. The trail is primarily used for hiking, running, nature trips, and snowshoeing and is best used from March until October. Dogs are also able to use this trail.",
         region_id: boulder.id
     )
 
-    = Trail.create(
-        name: "", 
-        miles: , 
-        difficulty: "", 
-        type: "", 
-        link: "", 
-        keywords: "", 
-        text: "",
+    first_second_flatiron= Trail.create(
+        name: "First and Second Flariton", 
+        miles: 2.5, 
+        difficulty: "Hard", 
+        type: "Loop", 
+        link: "https://www.alltrails.com/trail/us/colorado/first-and-second-flatiron-loop", 
+        keywords: "dog friendly, hiking, rock climbing, scramble", 
+        text: "First and Second Flatiron Loop is a 2.5 mile heavily trafficked loop trail located near Boulder, Colorado that features beautiful wild flowers and is rated as difficult. The trail is primarily used for hiking, running, and rock climbing and is best used from April until October. Dogs are also able to use this trail.",
         region_id: boulder.id
     )
 
-    = Trail.create(
-        name: "", 
-        miles: , 
-        difficulty: "", 
-        type: "", 
-        link: "", 
-        keywords: "", 
-        text: "",
+    chautauqua = Trail.create(
+        name: "Chautauqua", 
+        miles: 1.2, 
+        difficulty: "Easy", 
+        type: "Out and Back", 
+        link: "https://www.alltrails.com/trail/us/colorado/chautauqua-trail", 
+        keywords: "dogs on leash, kid friendly, hiking, walking, partially paved", 
+        text: "Chautauqua Trail is a 1.2 mile heavily trafficked out and back trail located near Boulder, Colorado that features beautiful wild flowers and is good for all skill levels. The trail is primarily used for hiking, walking, running, and nature trips and is best used from March until November. Dogs are also able to use this trail but must be kept on leash.",
         region_id: boulder.id
     )
 
-    = Trail.create(
-        name: "", 
-        miles: , 
-        difficulty: "", 
-        type: "", 
-        link: "", 
-        keywords: "", 
-        text: "",
+    bear_peak= Trail.create(
+        name: "Bear Peak", 
+        miles: 8.1, 
+        difficulty: "Hard", 
+        type: "Loop", 
+        link: "https://www.alltrails.com/trail/us/colorado/bear-peak-trail", 
+        keywords: "dogs on leash, hiking, bird watching, scramble", 
+        text: "Bear Peak Trail is a 8.1 mile heavily trafficked loop trail located near Boulder, Colorado that features beautiful wild flowers and is rated as difficult. The trail is primarily used for hiking, running, nature trips, and bird watching and is best used from April until October. Dogs are also able to use this trail but must be kept on leash.",
         region_id: boulder.id
     )
 
-    = Trail.create(
-        name: "", 
-        miles: , 
-        difficulty: "", 
-        type: "", 
-        link: "", 
-        keywords: "", 
-        text: "",
+    gregory_canyon= Trail.create(
+        name: "Gregory Canyon ", 
+        miles: 3.6, 
+        difficulty: "Moderate", 
+        type: "Loop", 
+        link: "https://www.alltrails.com/trail/us/colorado/gregory-canyon-range-view-and-flagstaff-trail-loop", 
+        keywords: "dog friendly, hiking, running, scramble", 
+        text: "Gregory Canyon, Range View and Flagstaff Trail Loop is a 3.6 mile heavily trafficked loop trail located near Boulder, Colorado that features beautiful wild flowers and is rated as moderate. The trail is primarily used for hiking, trail running, and nature trips. Dogs are also able to use this trail.",
         region_id: boulder.id
     )
 
-    = Trail.create(
-        name: "", 
-        miles: , 
-        difficulty: "", 
-        type: "", 
-        link: "", 
-        keywords: "", 
-        text: "",
+    red_rock= Trail.create(
+        name: "Red Rocks Trail", 
+        miles: 1.3, 
+        difficulty: "Easy", 
+        type: "Loop", 
+        link: "https://www.alltrails.com/trail/us/colorado/red-rocks-trail", 
+        keywords: "dogs on leash, kid friendly, hiking, scramble", 
+        text: "Red Rocks Trail is a 1.3 mile heavily trafficked loop trail located near Boulder, Colorado that features beautiful wild flowers and is good for all skill levels. The trail is primarily used for hiking and trail running. Dogs are also able to use this trail but must be kept on leash.",
         region_id: boulder.id
     )
 
-    = Trail.create(
-        name: "", 
-        miles: , 
-        difficulty: "", 
-        type: "", 
-        link: "", 
-        keywords: "", 
-        text: "",
-        region_id: boulder.id
+    chavez_beaver_brook= Trail.create(
+        name: "Chavez and Beaver Brook Loop", 
+        miles: 5.1, 
+        difficulty: "Moderate", 
+        type: "Loop", 
+        link: "https://www.alltrails.com/trail/us/colorado/beaver-brook-chavez-trail-loop", 
+        keywords: "dogs on leash, hiking, running, river, scramble", 
+        text: "Chavez Trail and Beaver Brook Trail Loop is a 5.1 mile heavily trafficked loop trail located near Golden, Colorado that features a river and is rated as moderate. The trail is primarily used for hiking, running, nature trips, and ice climbing and is best used from March until November. Dogs are also able to use this trail but must be kept on leash.",
+        region_id: genesee_park.id
+    )
+
+    genesee_summit= Trail.create(
+        name: "Genesee Summit", 
+        miles: 1.2, 
+        difficulty: "Easy", 
+        type: "Loop", 
+        link: "https://www.alltrails.com/trail/us/colorado/genesee-mountain-trail", 
+        keywords: "dogs on leash, kid friendly, hiking, walking, bird watching", 
+        text: "Genesee Summit Trail is a 1.2 mile moderately trafficked loop trail located near Golden, Colorado that features beautiful wild flowers and is good for all skill levels. The trail is primarily used for hiking, walking, nature trips, and bird watching and is best used from April until October. Dogs are also able to use this trail but must be kept on leash.",
+        region_id: genesee_park.id
+    )
+
+   mt_bierstadt = Trail.create(
+        name: "Mount Bierstadt", 
+        miles: 6.8, 
+        difficulty: "Hard", 
+        type: "Out and Back", 
+        link: "https://www.alltrails.com/trail/us/colorado/mount-bierstadt-trail", 
+        keywords: "dogs on leash, hiking, lake, river, scramble, no shade", 
+        text: "Mount Bierstadt Trail is a 6.8 mile heavily trafficked out and back trail located near Silver Plume, Colorado that features a lake and is rated as difficult. The trail is primarily used for hiking and snowboarding and is best used from June until September. Dogs are also able to use this trail but must be kept on leash.",
+        region_id: mt_evans.id
+    )
+    
+   chicago_lakes= Trail.create(
+        name: "Chicago Lakes ", 
+        miles: 9.1, 
+        difficulty: "Hard", 
+        type: "Out and Back", 
+        link: "https://www.alltrails.com/trail/us/colorado/chicago-lakes-trail", 
+        keywords: "dogs on leash, hiking, bird watching, lake, river, snowshoing, wildlife", 
+        text: "Chicago Lakes Trail is a 9.1 mile heavily trafficked out and back trail located near Idaho Springs, Colorado that features a lake and is rated as difficult. The trail offers a number of activity options and is accessible year-round. Dogs are also able to use this trail but must be kept on leash.",
+        region_id: mt_evans.id
+    )
+
+    mt_evans_summit= Trail.create(
+        name: "Mount Evans Summit ", 
+        miles: 0.6, 
+        difficulty: "Easy", 
+        type: "Out and Back", 
+        link: "https://www.alltrails.com/trail/us/colorado/mount-evans-summit-trail", 
+        keywords: "dogs on leash, kid friendly, hiking, nature trips, bird watching, partially paved", 
+        text: "Mount Evans Summit Trail is a 0.6 mile heavily trafficked out and back trail located near Idaho Springs, Colorado that offers the chance to see wildlife and is good for all skill levels. The trail is primarily used for hiking, walking, nature trips, and birding and is best used from June until September. Dogs are also able to use this trail but must be kept on leash.",
+        region_id: mt_evans.id
+    )
+
+    abyss_trail= Trail.create(
+        name: "Abyss Trail", 
+        miles: 11.7, 
+        difficulty: "Moderate", 
+        type: "Out and Back", 
+        link: "https://www.alltrails.com/trail/us/colorado/abyss-trail-to-helms-lake", 
+        keywords: "hiking, nature trips, walking, bird watching, river, views", 
+        text: "Abyss Trail to Helms Lake is a 11.7 mile moderately trafficked out and back trail located near Grant, Colorado that features a river and is rated as moderate. The trail is primarily used for hiking, walking, nature trips, and bird watching and is best used from May until September.",
+        region_id: mt_evans.id
+    )
+
+    chicago_lakes_lookout= Trail.create(
+        name: "Chicago Lakes Lookout", 
+        miles: 0.5, 
+        difficulty: "Easy", 
+        type: "Out and Back", 
+        link: "https://www.alltrails.com/trail/us/colorado/chicago-lakes-lookout-from-summit-lake", 
+        keywords: "hiking, nature trips, walking, bird watching, lake, views", 
+        text: "Chicago Lakes Lookout from Summit Lake is a 0.5 mile moderately trafficked out and back trail located near Idaho Springs, Colorado that offers scenic views and is good for all skill levels. The trail is primarily used for hiking, walking, nature trips, and birding and is best used from May until September.",
+        region_id: mt_evans.id
+    )
+
+    tanglewood= Trail.create(
+        name: "Tanglewood", 
+        miles: 10, 
+        difficulty: "Hard", 
+        type: "Out and Back", 
+        link: "https://www.alltrails.com/trail/us/colorado/chicago-lakes-lookout-from-summit-lake", 
+        keywords: "hiking, nature trips, walking, bird watching, lake, views", 
+        text: "Tanglewood Trail is a 10 mile moderately trafficked out and back trail located near Bailey, Colorado that features beautiful wild flowers and is rated as difficult. The trail is primarily used for hiking and horses and is best used from May until October. Dogs are also able to use this trail but must be kept on leash.",
+        region_id: mt_evans.id
+    )
+
+    echo_lake= Trail.create(
+        name: "Echo Lake ", 
+        miles: 6.6, 
+        difficulty: "Moderate", 
+        type: "Out and Back", 
+        link: "https://www.alltrails.com/trail/us/colorado/echo-lake-to-idaho-springs-reservoir", 
+        keywords: "dogs on leash, hiking, nature trips, walking, bird watching, lake", 
+        text: "Echo Lake to Idaho Springs Reservoir is a 6.6 mile moderately trafficked out and back trail located near Georgetown, Colorado that features a lake and is rated as moderate. The trail is primarily used for hiking, walking, nature trips, and birding and is best used from March until October. Dogs are also able to use this trail but must be kept on leash.",
+        region_id: mt_evans.id
     )
