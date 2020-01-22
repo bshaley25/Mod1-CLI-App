@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_22_212236) do
+ActiveRecord::Schema.define(version: 2020_01_22_234018) do
 
   create_table "hikers", force: :cascade do |t|
     t.string "name"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 2020_01_22_212236) do
 
   create_table "trails", force: :cascade do |t|
     t.string "name"
-    t.decimal "miles"
+    t.float "miles"
     t.string "difficulty"
-    t.string "type"
+    t.string "route_type"
     t.string "link"
     t.string "keywords"
     t.text "notes"
