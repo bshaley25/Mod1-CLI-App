@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_22_164258) do
+ActiveRecord::Schema.define(version: 2020_01_22_212236) do
+
+  create_table "hikers", force: :cascade do |t|
+    t.string "name"
+    t.string "trail_name"
+  end
+
+  create_table "regions", force: :cascade do |t|
+    t.string "name"
+  end
 
   create_table "trails", force: :cascade do |t|
     t.string "name"
@@ -20,6 +29,18 @@ ActiveRecord::Schema.define(version: 2020_01_22_164258) do
     t.string "link"
     t.string "keywords"
     t.text "notes"
+    t.integer "region_id"
+    t.index ["region_id"], name: "index_trails_on_region_id"
   end
 
+  create_table "trips", force: :cascade do |t|
+    t.integer "hiker_id"
+    t.integer "trail_id"
+    t.index ["hiker_id"], name: "index_trips_on_hiker_id"
+    t.index ["trail_id"], name: "index_trips_on_trail_id"
+  end
+
+  add_foreign_key "trails", "regions"
+  add_foreign_key "trips", "hikers"
+  add_foreign_key "trips", "trails"
 end
