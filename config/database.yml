@@ -1,0 +1,4 @@
+development:
+  adapter: 'sqlite3'
+  database: db/colorado_hiking_trails.db
+  
