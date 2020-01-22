@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 2020_01_22_164258) do
 
   create_table "trails", force: :cascade do |t|
     t.string "name"
-    t.string "region"
     t.decimal "miles"
     t.string "difficulty"
     t.string "type"
