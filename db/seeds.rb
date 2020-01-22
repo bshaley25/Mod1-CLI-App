@@ -1,7 +1,11 @@
-Trail.destroy_all
-Hiker.destroy_all 
-Region.destroy_all 
-Trip.destroy_all 
+rocky_mountain = Region.create(name: "Rocky Mountain")
+pikes = Region.create(name: "Pikes")
+white_river = Region.create(name: "White River")
+arapahoe = Region.create(name: "Arapahoe")
+roosevelt = Region.create(name: "Roosevelt")
+boulder = Region.create(name: "Boulder")
+genesee_park = Region.create(name: "Genesee_park")
+mt_evans = Region.create(name: "Mt. Evans")
 
 
 emerald_lake = Trail.create(
@@ -566,3 +570,4 @@ maxwell_falls= Trail.create(
         text: "Echo Lake to Idaho Springs Reservoir is a 6.6 mile moderately trafficked out and back trail located near Georgetown, Colorado that features a lake and is rated as moderate. The trail is primarily used for hiking, walking, nature trips, and birding and is best used from March until October. Dogs are also able to use this trail but must be kept on leash.",
         region_id: mt_evans.id
     )
+
