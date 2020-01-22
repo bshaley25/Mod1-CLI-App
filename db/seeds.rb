@@ -402,7 +402,7 @@ maxwell_falls= Trail.create(
     )
 
 
-    = Trail.create(
+    royal_arch= Trail.create(
         name: "", 
         miles: , 
         difficulty: "", 
