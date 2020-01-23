@@ -15,7 +15,8 @@ class Trail < ActiveRecord::Base
         end 
         trail_names = array_of_trails.map do |trail|
             trail.name
-        end 
+        end
+        clear
         response = prompt.select("Cool, select a trail", trail_names)
 
        trail_object = Trail.all.find do |trail|

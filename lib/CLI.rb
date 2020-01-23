@@ -15,6 +15,7 @@ class CLI
     end 
 
     def main_menu
+        puts "\n"
         navigation_response = prompt.select("Do you want to search through the full list of hikes, via their region, or do you want help finding a trail?", ["Help me find a trail","I want to look through the trails"])
         if navigation_response == "I want to look through the trails"
             show_regions
@@ -25,6 +26,7 @@ class CLI
 
     def region_prompt
         prompt_regions = Region.prompt_list_of_regions
+        clear
         puts "Here is a list of the trails in that area"
         trail = Trail.return_trails_from_prompt_region(prompt_regions)
         Trail.trail_information(trail)
