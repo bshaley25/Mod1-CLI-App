@@ -16,22 +16,31 @@ class Trail < ActiveRecord::Base
         trail_names = array_of_trails.map do |trail|
             trail.name
         end 
-        response = prompt.select("Cool, select a trail", trail_names)
+        
+
+        response = prompt.select("Here is a list of trails in that region", trail_names)
 
        trail_object = Trail.all.find do |trail|
             trail.name == response
         end 
     end 
 
+    def self.find_trail_from_name(trail_name)
+        Trail.all.find do |trail|
+            trail.name == trail_name
+        end
+    end 
+
     def self.trail_information(trail)
-        puts "Here is some info about the trail you selected!\n\n"
-        puts "The Trails name is: #{trail.name}"
-        puts "It is #{trail.miles} miles long"
-        puts "The difficulty level is: #{trail.difficulty}"
-        puts "The route is: #{trail.route_type}"
-        puts "Here is a link to check out the trail: #{trail.link}"
-        puts "Some keywords for you: #{trail.keywords}"
-        puts "Notes:#{trail.notes}"
+        clear
+        puts "\nTrail Name: #{trail.name}\n"
+        puts "Miles: #{trail.miles}\n"
+        puts "Difficulty: #{trail.difficulty}\n"
+        puts "Route Type: #{trail.route_type}\n\n"
+        puts "Link: #{trail.link}\n"
+        puts "Keywords: #{trail.keywords}\n"
+        puts "Notes:#{trail.notes}\n\n"
+       trail 
     end 
     
 
