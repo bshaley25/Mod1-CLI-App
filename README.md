@@ -5,15 +5,16 @@ Hi Friend! Welcome to our CLI App -- We made this for the hiking enthusiast. Whe
 In addition to that, we have seven regions in Colorado and over 50 hikes for you to search through. 
 Have fun! 
 
-![hiker and mountains](https://i.ibb.co/tKysnyP/hiking.png)
+![hikers](https://i.ibb.co/k4LDdtJ/Screen-Shot-2020-01-24-at-11-37-36-AM.png)
 
 ---
 
 ## How the app works  
 
-* To run the app, first enter `ruby/runner.rb` into your terminal. This will prompt the application to start. 
+* To run the app, first enter clone down the repo to your local device. 
+* `ruby/runner.rb` into your terminal. This will prompt the application to start. 
 
-* From there, you will be prompted to enter your first name as well as a trail name. We offer a link to generate your trail name, which can also be accessed [Here](https://thetrek.co/trail-name-generator/)
+* From there, you will be prompted to enter your first name as well as a trail name. We offer a link to generate your trail name, which can also be accessed [here](https://thetrek.co/trail-name-generator/)
 
 * If you have already logged in before, you will be able to automatically prompted into the menu. From there you can navigate through the application as usual and view your favorites. 
 
@@ -25,24 +26,9 @@ Have fun!
     * Exit the program 
 
 
-### Current bigs under review 
-
-Currently, your name and trailname will be saved into the database as the following structure. Remember this when trying to sign in, otherwise you may not see your list of favorites 
-
-**Input:**
-Name: FrEddY
-Trail Name: Galactic Vagabond
-
-**How it's saved in database:**
-Name: Freddy 
-Trail Name: Galactic vagabond 
-
-
-This is a bug that is in the process of being fixed. 
-
 ### Gems 
 
-What things you need to install the software and how to install them
+Here is a full list of the gem dependencies 
 
 ```
 gem "sinatra-activerecord", "~> 2.0"
@@ -57,70 +43,36 @@ gem "tty-prompt", "~> 0.12.0"
 
 ```
 
-### Installing
+### Current bugs under review 
 
-A step by step series of examples that tell you how to get a development env running
+Currently, your name and trailname will be saved into the database as the following structure. Remember this when trying to sign in, otherwise you may not see your list of favorites 
 
-Say what the step will be
+**Input:**
 
-```
-Give the example
-```
+Name: FrEddY
 
-And repeat
+Trail Name: Galactic Vagabond
 
-```
-until finished
-```
+**How it's saved in database:**
 
-End with an example of getting some data out of the system or using it for a little demo
+Name: Freddy 
 
-## Running the tests
+Trail Name: Galactic vagabond 
 
-Explain how to run the automated tests for this system
+
+This is a bug that is in the process of being fixed. 
+
 
 ### Technologies 
 
 * Ruby on Rails 
 * Active Record 
+* Terminal 
 
 
-### And coding style tests
+### Authors
 
-Explain what these tests test and why
-
-```
-Give an example
-```
+* Brad Haley - [Github Repo](https://github.com/bshaley25)
+* Miwha Geschwind - [Github Repo](https://github.com/miwhag)
 
 
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
