@@ -18,6 +18,7 @@ class CLI
     def prompt_and_return_favorite_list
         favorites_list = Trip.user_trails(@user)
         if favorites_list.length == 0
+            clear
             slow_puts "It looks like you don't have any favorites. Check out our trails and add to favorites!"
             prompt_response = prompt.select("",["Main Menu"])
             if prompt_response == "Main Menu"
@@ -25,7 +26,8 @@ class CLI
                 main_menu
             end
         else
-            user_favorite_trails = prompt.select("Which trail do you want to look it?", favorites_list.push("Main Menu"))
+            clear
+            user_favorite_trails = prompt.select("Here is a list of your saved trails. Which would you like to look it?\n", favorites_list.push("Main Menu"))
             if user_favorite_trails == "Main Menu"
                 clear
                 main_menu
@@ -67,12 +69,13 @@ class CLI
 
 
     def main_menu
-        navigation_response = prompt.select("Do you want to search through the full list of hikes, via their region, or do you want help finding a trail?", ["Help me find a trail","View my favorite trails","I want to look through the trails", "Exit program"])
+        navigation_response = prompt.select("\nMAIN MENU:\n", ["Help me find a trail","View my favorite trails","I want to look through the trails", "Exit program"])
         if navigation_response == "I want to look through the trails"
             region_navigation 
         elsif navigation_response == "View my favorite trails" 
             favorites_navigation_trails
         elsif navigation_response == "Help me find a trail"
+             clear
             p "working on this"
         elsif navigation_response == "Exit program"
             clear
@@ -80,6 +83,9 @@ class CLI
             exit
         end
     end 
+
+    #Do you want to search through the trails yourself or do you want help finding one? 
+    #Brad, what do you think about taking this out and just saying MAIN MENU.
 
     def region_prompt
         clear 
@@ -107,7 +113,7 @@ class CLI
     end
 
     def start 
-        intro 
+        # intro 
         collect_user_info
         main_menu
         exit
