@@ -5,7 +5,8 @@ Hi Friend! Welcome to our CLI App -- We made this for the hiking enthusiast. Whe
 In addition to that, we have seven regions in Colorado and over 50 hikes for you to search through. 
 Have fun! 
 
-![hikers](https://i.ibb.co/k4LDdtJ/Screen-Shot-2020-01-24-at-11-37-36-AM.png)
+![hikers](https://i.ibb.co/jVjTmk8/hikers.jpg)
+
 
 ---
 
@@ -47,6 +48,7 @@ gem "tty-prompt", "~> 0.12.0"
 
 Currently, your name and trailname will be saved into the database as the following structure. Remember this when trying to sign in, otherwise you may not see your list of favorites 
 
+```
 **Input:**
 
 Name: FrEddY
@@ -59,7 +61,7 @@ Name: Freddy
 
 Trail Name: Galactic vagabond 
 
-
+```
 This is a bug that is in the process of being fixed. 
 
 
@@ -76,3 +78,4 @@ This is a bug that is in the process of being fixed.
 * Miwha Geschwind - [Github Repo](https://github.com/miwhag)
 
 
+![](MiwhaGIF.gif)
