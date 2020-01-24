@@ -19,7 +19,7 @@ class Trail < ActiveRecord::Base
 
         end 
     
-        response = prompt.select("Here is a list of trails in that region", trail_names)
+        response = prompt.select("Here is a list of trails in that region\n", trail_names)
 
        trail_object = Trail.all.find do |trail|
             trail.name == response
