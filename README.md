@@ -48,20 +48,22 @@ gem "tty-prompt", "~> 0.12.0"
 
 Currently, your name and trailname will be saved into the database as the following structure. Remember this when trying to sign in, otherwise you may not see your list of favorites 
 
-```
-**Input:**
 
+**Input:**
+```
 Name: FrEddY
 
 Trail Name: Galactic Vagabond
+```
 
 **How it's saved in database:**
 
+```
 Name: Freddy 
 
 Trail Name: Galactic vagabond 
-
 ```
+
 This is a bug that is in the process of being fixed. 
 
 
@@ -70,6 +72,7 @@ This is a bug that is in the process of being fixed.
 * Ruby on Rails 
 * Active Record 
 * Terminal 
+
 
 
 ### Authors
