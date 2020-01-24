@@ -16,6 +16,7 @@ class Hiker < ActiveRecord::Base
         if return_hiker == nil 
             clear
            new_hiker = Hiker.create(name: name, trail_name: trail_name)
+           clear
            puts "Nice to meet you #{new_hiker.name}, let's check out some trails"
             new_hiker
         else 

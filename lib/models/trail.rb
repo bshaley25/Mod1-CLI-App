@@ -15,9 +15,10 @@ class Trail < ActiveRecord::Base
         end 
         trail_names = array_of_trails.map do |trail|
             trail.name
-        end 
-        
 
+
+        end 
+    
         response = prompt.select("Here is a list of trails in that region", trail_names)
 
        trail_object = Trail.all.find do |trail|

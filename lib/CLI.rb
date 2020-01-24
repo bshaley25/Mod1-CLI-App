@@ -14,10 +14,25 @@ class CLI
         @user = Hiker.check_hiker_in_database(get_name,get_trail_name)
     end 
 
+    def prompt_and_return_favorite_list
+        favorites_list = Trip.user_trails(@user)
+        if favorites_list.length == 0
+            slow_puts "It looks like you don't have any favorites. Check out our trails and add to favorites!"
+            prompt_response = prompt.select("",["Main Menu"])
+            if prompt_response == "Main Menu"
+                clear
+                main_menu
+            end
+        else
+            user_favorite_trails = prompt.select("Which trail do you want to look it?", favorites_list)
+            chosen_trail = Trail.find_trail_from_name(user_favorite_trails)
+            Trail.trail_information(chosen_trail)
+        end
+    end
+
     def favorites_navigation_trails
-        user_favorite_trails = prompt.select("Which trail do you want to look it?", Trip.user_trails(@user))
-        chosen_trail = Trail.find_trail_from_name(user_favorite_trails)
-        Trail.trail_information(chosen_trail)
+
+        chosen_trail = prompt_and_return_favorite_list
 
         response = prompt.select("What do you want to do from here?",["Go back to favorites","Delete this trip from favorites","Go back to main menu"])
 
@@ -40,21 +55,24 @@ class CLI
 
         elsif response == "Go back to main menu"
             clear
-           main_menu
+            main_menu
         end    
     end 
 
 
     def main_menu
-        navigation_response = prompt.select("Do you want to search through the full list of hikes, via their region, or do you want help finding a trail?", ["Help me find a trail","Look at my favorites list","I want to look through the trails"])
+        navigation_response = prompt.select("Do you want to search through the full list of hikes, via their region, or do you want help finding a trail?", ["Help me find a trail","Look at my favorites list","I want to look through the trails", "Exit program"])
         if navigation_response == "I want to look through the trails"
             region_navigation 
         elsif navigation_response == "Look at my favorites list" 
             favorites_navigation_trails
-
         elsif navigation_response == "Help me find a trail"
             p "working on this"
-        end  
+        elsif navigation_response == "Exit program"
+            clear
+            slow_puts "See you next time!\n"
+            exit
+        end
     end 
 
     def region_prompt
@@ -84,7 +102,7 @@ class CLI
     
 
     def start 
-        # intro 
+        intro 
         collect_user_info
         main_menu
     end 
