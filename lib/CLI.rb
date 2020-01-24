@@ -75,9 +75,7 @@ class CLI
         elsif navigation_response == "View my favorite trails" 
             favorites_navigation_trails
         elsif navigation_response == "Help me find a trail"
-             clear
-            p "working on this"
-            exit
+            help_finding_trail
         elsif navigation_response == "Exit program"
             clear
             slow_puts "See you next time!\n"
@@ -87,6 +85,24 @@ class CLI
 
     #Do you want to search through the trails yourself or do you want help finding one? 
     #Brad, what do you think about taking this out and just saying MAIN MENU.
+
+    def help_finding_trail
+        clear
+        slow_puts "Here are some trails to keywords to help you find a trail!\n"
+        keyword_choice = prompt.select("Please choose one", [Trail.list_of_all_chosen_key_words].push("Main Menu"))
+        if keyword_choice == "Main Menu"
+            main_menu
+        else
+            clear
+            keyword_array = Trail.find_trail_from_keyword keyword_choice
+            slow_puts "Here are some trails that match that keyword!\n"
+            keyword_trail_name = prompt.select("Please choose a trail",keyword_array)
+            keyword_trail = Trail.find_trail_from_name(keyword_trail_name)
+            Trail.trail_information(keyword_trail)
+
+        end
+    end
+
 
     def region_prompt
         clear 
