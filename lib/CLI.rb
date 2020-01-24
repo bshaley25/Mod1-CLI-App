@@ -77,6 +77,7 @@ class CLI
         elsif navigation_response == "Help me find a trail"
              clear
             p "working on this"
+            exit
         elsif navigation_response == "Exit program"
             clear
             slow_puts "See you next time!\n"
