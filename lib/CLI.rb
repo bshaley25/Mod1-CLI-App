@@ -107,6 +107,7 @@ class CLI
         intro 
         collect_user_info
         main_menu
+        exit
     end 
 
     def get_name
