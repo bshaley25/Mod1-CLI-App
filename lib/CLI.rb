@@ -75,14 +75,47 @@ class CLI
         elsif navigation_response == "View my favorite trails" 
             favorites_navigation_trails
         elsif navigation_response == "Help me find a trail"
-             clear
-            p "working on this"
+            help_finding_trail
         elsif navigation_response == "Exit program"
             clear
             slow_puts "See you next time!\n"
             exit
         end
     end 
+
+
+    def help_finding_trail
+        clear
+        slow_puts "Here are some trails to keywords to help you find a trail!\n"
+        keyword_choice = prompt.select("Please choose one", [Trail.list_of_all_chosen_key_words].push("Main Menu"))
+        if keyword_choice == "Main Menu"
+            clear
+            main_menu
+        else
+            help_navigation keyword_choice
+        end
+    end
+
+    def help_navigation prompt_choice
+        clear
+        keyword_array = Trail.find_trail_from_keyword prompt_choice
+        slow_puts "Here are some trails that match that keyword!\n"
+        keyword_trail_name = prompt.select("Please choose a trail",keyword_array)
+        keyword_trail = Trail.find_trail_from_name(keyword_trail_name)
+        Trail.trail_information(keyword_trail)
+        help_nav_response = prompt.select("What do you want to do from here?",["Go back to help","Add this trip to favorites","Go back to main menu"])
+        if help_nav_response == "Go back to help"
+            clear
+            help_finding_trail
+        elsif help_nav_response == "Add this trip to favorites" 
+            clear
+            Trip.create(hiker:@user, trail:keyword_trail)
+            main_menu
+        elsif help_nav_response == "Go back to main menu"
+            clear
+            main_menu
+        end
+    end
 
 
     def region_prompt

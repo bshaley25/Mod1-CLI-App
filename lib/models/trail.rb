@@ -15,8 +15,6 @@ class Trail < ActiveRecord::Base
         end 
         trail_names = array_of_trails.map do |trail|
             trail.name
-
-
         end 
     
         response = prompt.select("Here is a list of trails in that region\n", trail_names)
@@ -43,6 +41,15 @@ class Trail < ActiveRecord::Base
         puts "Notes:#{trail.notes}\n\n"
        trail 
     end 
+
+    def self.list_of_all_chosen_key_words
+        ["kid friendly","dog friendly","dogs on leash","no dogs","river","waterfall","lake","camping","backpacking","paved","mountian biking","views"]
+    end
+
+    def self.find_trail_from_keyword keyword
+        chosen_keyword_trail_list = all.find_all{|trail| trail.keywords.include?(keyword)}
+        chosen_keyword_trail_list.map{|trail| trail.name}
+    end
     
 
 end
