@@ -6,8 +6,8 @@ class CLI
     def intro 
         clear
         slow_puts "\nHi Friend! We heard you're visiting Colorado and are looking for a sweet spot to hike at!\n\n" 
-        slow_puts "We made this app to help you find some options\n\n"
-        slow_puts "But first! Let's grab your name so that you can save your list of trails and come back to it if you'd like\n\n"
+        slow_puts "We made this app to help you find some options.\n\n" 
+        slow_puts "But first we need a little info. Your first name and trail name. You can grab your trailname here: https://thetrek.co/trail-name-generator/ \n\n"
     end 
 
     def collect_user_info
@@ -24,6 +24,7 @@ class CLI
                 main_menu
             end
         else
+            clear
             user_favorite_trails = prompt.select("Which trail do you want to look it?", favorites_list)
             chosen_trail = Trail.find_trail_from_name(user_favorite_trails)
             Trail.trail_information(chosen_trail)
@@ -61,10 +62,10 @@ class CLI
 
 
     def main_menu
-        navigation_response = prompt.select("Do you want to search through the full list of hikes, via their region, or do you want help finding a trail?", ["Help me find a trail","Look at my favorites list","I want to look through the trails", "Exit program"])
+        navigation_response = prompt.select("Do you want to search through the full list of hikes, via their region, or do you want help finding a trail?", ["Help me find a trail","View my favorite trails","I want to look through the trails", "Exit program"])
         if navigation_response == "I want to look through the trails"
             region_navigation 
-        elsif navigation_response == "Look at my favorites list" 
+        elsif navigation_response == "View my favorite trails" 
             favorites_navigation_trails
         elsif navigation_response == "Help me find a trail"
             p "working on this"
@@ -86,10 +87,11 @@ class CLI
 
     def region_navigation
         saved_trail = region_prompt
-        response = prompt.select("do you want to go back to regions or save this trail?", ["go back to regions","save this trail","go back to main nav"])
+        response = prompt.select("do you want to go back to regions or save this trail?", ["go back to regions","save this trail","go back to main menu"])
+
         if response == "go back to regions"
             region_navigation
-        elsif response == "go back to main nav"
+        elsif response == "go back to main menu"
             clear
             main_menu
         elsif response == "save this trail"
