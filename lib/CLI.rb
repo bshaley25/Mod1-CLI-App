@@ -8,7 +8,7 @@ class CLI
         clear
         slow_puts "\nHi Friend! We heard you're visiting Colorado and are looking for a sweet spot to hike at!\n\n" 
         slow_puts "We made this app to help you find some options.\n\n" 
-        slow_puts "But first we need a little info. Your first name and trail name. You can grab your trailname here: https://thetrek.co/trail-name-generator/ \n\n"
+        slow_puts "But first we need a little info. Your first name and trail name. You can grab your trail name here: https://thetrek.co/trail-name-generator/ \n\n"
     end 
 
     def collect_user_info
