@@ -74,6 +74,7 @@ This is a bug that is in the process of being fixed.
 * Terminal 
 
 
+
 ### Authors
 
 * Brad Haley - [Github Repo](https://github.com/bshaley25)
