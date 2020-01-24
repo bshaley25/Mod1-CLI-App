@@ -91,6 +91,7 @@ class CLI
         slow_puts "Here are some trails to keywords to help you find a trail!\n"
         keyword_choice = prompt.select("Please choose one", [Trail.list_of_all_chosen_key_words].push("Main Menu"))
         if keyword_choice == "Main Menu"
+            clear
             main_menu
         else
             help_navigation keyword_choice
@@ -145,7 +146,7 @@ class CLI
     end
 
     def start 
-        # intro 
+        intro 
         collect_user_info
         main_menu
         exit
