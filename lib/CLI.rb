@@ -2,6 +2,7 @@ class CLI
     def prompt
         TTY::Prompt.new
     end
+
     
     def intro 
         clear
@@ -24,10 +25,14 @@ class CLI
                 main_menu
             end
         else
-            clear
-            user_favorite_trails = prompt.select("Which trail do you want to look it?", favorites_list)
-            chosen_trail = Trail.find_trail_from_name(user_favorite_trails)
-            Trail.trail_information(chosen_trail)
+            user_favorite_trails = prompt.select("Which trail do you want to look it?", favorites_list.push("Main Menu"))
+            if user_favorite_trails == "Main Menu"
+                clear
+                main_menu
+            else
+                chosen_trail = Trail.find_trail_from_name(user_favorite_trails)
+                Trail.trail_information(chosen_trail)
+            end
         end
     end
 
@@ -99,14 +104,13 @@ class CLI
             Trip.create(hiker:@user, trail:saved_trail)
             main_menu
         end
-    end 
-
-    
+    end
 
     def start 
         intro 
         collect_user_info
         main_menu
+        exit
     end 
 
     def get_name
