@@ -43,7 +43,7 @@ class Trail < ActiveRecord::Base
     end 
 
     def self.list_of_all_chosen_key_words
-        ["kid friendly","dog friendly","dogs on leash","no dogs","river","waterfall","lake","camping","backpacking","paved","mountian biking","views"]
+        ["kid friendly","dog friendly","dogs on leash","no dogs","river","waterfall","lake","camping","backpacking","paved","mountain biking","views"]
     end
 
     def self.find_trail_from_keyword keyword
