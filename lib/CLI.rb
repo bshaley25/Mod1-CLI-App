@@ -83,8 +83,6 @@ class CLI
         end
     end 
 
-    #Do you want to search through the trails yourself or do you want help finding one? 
-    #Brad, what do you think about taking this out and just saying MAIN MENU.
 
     def help_finding_trail
         clear
