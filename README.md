@@ -78,5 +78,6 @@ This is a bug that is in the process of being fixed.
 * Miwha Geschwind - [Github Repo](https://github.com/miwhag)
 
 
+### Preview
 
 ![](CLI_app_1.gif)
