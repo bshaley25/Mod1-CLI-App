@@ -2,7 +2,7 @@ class CLI
     def prompt
         TTY::Prompt.new
     end
-    
+
     
     def intro 
         clear
@@ -104,6 +104,7 @@ class CLI
             main_menu
         end
     end 
+    
     
 
     def start 
