@@ -3,6 +3,7 @@ class CLI
         TTY::Prompt.new
     end
     
+    
     def intro 
         clear
         slow_puts "\nHi Friend! We heard you're visiting Colorado and are looking for a sweet spot to hike at!\n\n" 
