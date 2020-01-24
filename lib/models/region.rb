@@ -14,7 +14,7 @@ class Region < ActiveRecord::Base
 
 
     def self.prompt_list_of_regions
-        response = prompt.select("Which region are you interested in?", list_of_all_regions)
+        response = prompt.select("Which region are you interested in?\n", list_of_all_regions)
         response
     end
 end
