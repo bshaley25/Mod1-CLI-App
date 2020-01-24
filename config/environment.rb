@@ -8,7 +8,7 @@ def slow_puts string
     string.each_char do |char|
     putc char
     $stdout.flush
-    sleep 0.02
+    sleep 0.04
     end
 end
 
