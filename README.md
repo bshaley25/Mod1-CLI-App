@@ -5,7 +5,7 @@ Hi Friend! Welcome to our CLI App -- We made this for the hiking enthusiast. Whe
 In addition to that, we have seven regions in Colorado and over 50 hikes for you to search through. 
 Have fun! 
 
-![hiker and mountains](https://i.ibb.co/1QPRqv3/mountain.jpg)
+![hiker and mountains](https://i.ibb.co/V9XSbXp/hiking.png)
 
 ---
 
